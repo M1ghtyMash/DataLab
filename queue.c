@@ -22,7 +22,7 @@ int main()
 
         switch (choice)
         {
-        case 1: // Enqueue
+        case 1:
             if (rear == n - 1)
             {
                 printf("Queue overflow\n");
@@ -31,23 +31,23 @@ int main()
             {
                 if (front == -1)
                 {
-                    // If the queue is empty, initialize front and rear to 0
+
                     front = 0;
                 }
                 printf("Enter number to enqueue: \n");
                 scanf("%d", &value);
-                arr[++rear] = value; // Add the value at the rear
+                arr[++rear] = value;
             }
             break;
 
-        case 2: // Dequeue
+        case 2:
             if (front == -1 || front > rear)
             {
                 printf("Queue underflow\n");
             }
             else
             {
-                printf("Dequeued: %d\n", arr[front++]); // Remove from the front
+                printf("Dequeued: %d\n", arr[front++]);
                 if (front > rear)
                 {
                     // Reset the queue if it's empty
@@ -56,7 +56,7 @@ int main()
             }
             break;
 
-        case 3: // Display
+        case 3:
             if (front == -1 || front > rear)
             {
                 printf("Queue is empty\n");
@@ -71,7 +71,7 @@ int main()
             }
             break;
 
-        case 4: // Exit
+        case 4:
             printf("EXITING...\n");
             return 0;
 
