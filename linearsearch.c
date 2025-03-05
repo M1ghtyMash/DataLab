@@ -1,36 +1,25 @@
 #include <stdio.h>
 
-int linearSearch(int arr[], int size, int target)
-{
-    for (int i = 0; i < size; i++)
-    {
-        if (arr[i] == target)
-        {
-            return i;
-        }
-    }
-    return -1;
-}
-
 int main()
 {
-    int arr[] = {10, 20, 30, 40, 50};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    int target;
+    int A[] = {10, 20, 30, 30, 40, 50, 60, 70, 80, 90, 100};
+    int flag = 0;
+    int x;
+    int n = sizeof(A) / sizeof(A[0]);
 
     printf("Enter the number to search: ");
-    scanf("%d", &target);
+    scanf("%d", &x);
 
-    int result = linearSearch(arr, size, target);
-
-    if (result != -1)
+    for (int i = 0; i < n; i++)
     {
-        printf("Element found at index %d\n", result);
+        if (A[i] == x)
+        {
+            printf("Element found at index: %d\n", i);
+            flag++;
+        }
     }
-    else
+    if (flag == 0)
     {
-        printf("Element not found in the array\n");
+        printf("Element not found");
     }
-
-    return 0;
 }
